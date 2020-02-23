@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Selector_Attr">
+        <attr name="normalColor" format="color" />
+        <attr name="pressedColor" format="color" />
+        <attr name="rippleColor" format="color" />
+        <attr name="selectedColor" format="color" />
+
+        <attr name="normalShape" format="enum">
+            <enum name="rectangle" value="1" />
+            <enum name="oval" value="2" />
+        </attr>
+        <attr name="pressedShape" format="enum">
+            <enum name="rectangle" value="1" />
+            <enum name="oval" value="2" />
+        </attr>
+        <attr name="selectedShape" format="enum">
+            <enum name="rectangle" value="1" />
+            <enum name="oval" value="2" />
+        </attr>
+
+        <attr name="leftTopCornerRadius" format="dimension" />
+        <attr name="leftBottomCornerRadius" format="dimension" />
+        <attr name="rightTopCornerRadius" format="dimension" />
+        <attr name="rightBottomCornerRadius" format="dimension" />
+        <attr name="radius" format="dimension" />
+
+        <attr name="normalDrawable" format="reference" />
+        <attr name="pressedDrawable" format="reference" />
+        <attr name="selectedDrawable" format="reference" />
+
+        <attr name="ripple" format="boolean" />
+        <attr name="isBounded" format="boolean" />
+    </declare-styleable>
+</resources>
