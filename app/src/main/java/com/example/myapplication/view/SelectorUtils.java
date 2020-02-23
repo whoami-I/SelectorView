@@ -161,8 +161,9 @@ public class SelectorUtils {
                 rippleDrawable = new RippleDrawable(ColorStateList.valueOf(mRippleColor),
                         null, maskDrawable);
             } else {
-                rippleDrawable = new RippleDrawable(ColorStateList.valueOf(mRippleColor),
-                        mNormalDrawable, null);
+                StateListDrawable stateListDrawable = getStateListDrawable(mNormalColor, mPressedColor, mPressedColor);
+                rippleDrawable = new RippleDrawable(ColorStateList.valueOf(mPressedColor),
+                        stateListDrawable, null);
             }
 
             view.setBackgroundDrawable(rippleDrawable);
@@ -192,6 +193,18 @@ public class SelectorUtils {
                 selectedDrawable);
         states.addState(new int[]{},
                 normalDrawable);
+        return states;
+    }
+
+    public static StateListDrawable getStateListDrawable(
+            int normalColor, int pressedColor, int selectedColor) {
+        StateListDrawable states = new StateListDrawable();
+        states.addState(new int[]{android.R.attr.state_pressed},
+                new ColorDrawable(pressedColor));
+        states.addState(new int[]{android.R.attr.state_selected},
+                new ColorDrawable(selectedColor));
+        states.addState(new int[]{},
+                new ColorDrawable(normalColor));
         return states;
     }
 

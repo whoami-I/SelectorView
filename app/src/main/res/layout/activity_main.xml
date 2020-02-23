@@ -22,6 +22,9 @@
             android:textSize="20sp"
             app:pressedShape="oval"
             app:selectedShape="oval"
+            app:normalColor="#ff0000"
+            app:pressedColor="#ffff00"
+            app:selectedColor="#ffff00"
             app:radius="30dp"
             app:ripple="true" />
 

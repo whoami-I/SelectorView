@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 isSelected = !isSelected;
                 if (isSelected) {
-                    viewById.setSelected(true);
+//                    viewById.setSelected(true);
                 } else {
-                    viewById.setSelected(false);
+//                    viewById.setSelected(false);
                 }
             }
         });
